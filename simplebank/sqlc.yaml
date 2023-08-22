@@ -1,0 +1,20 @@
+version: "2"
+project:
+    id: ""
+cloud:
+    organization: ""
+    project: ""
+    hostname: ""
+sql:
+  - engine: "postgresql"
+    queries: "./db/query/"
+    schema: "./db/migration"
+    gen:
+      go:
+        package: "db"
+        out: "./db/sqlc/"
+        emit_json_tags: true
+overrides:
+    go: null
+plugins: []
+rules: []
